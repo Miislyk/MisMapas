@@ -41,7 +41,7 @@ public class MapsGtoPresa extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng presa = new LatLng(21.00209480594655, -101.24060572531857);
-        mMap.addMarker(new MarkerOptions().position(presa).title("Presa de la Olla").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
+        mMap.addMarker(new MarkerOptions().position(presa).title("Presa").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(presa, 17));
     }
 }
