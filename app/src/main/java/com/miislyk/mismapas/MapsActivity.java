@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -40,7 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng basilica = new LatLng(21.016519783354365, -101.25318528559842);
-        mMap.addMarker(new MarkerOptions().position(basilica).title("Basilica Guanajuato"));
+        mMap.addMarker(new MarkerOptions().position(basilica).title("Basilica Guanajuato").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(basilica));
     }
 }

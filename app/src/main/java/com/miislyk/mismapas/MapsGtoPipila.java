@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -40,7 +41,7 @@ public class MapsGtoPipila extends FragmentActivity implements OnMapReadyCallbac
 
         // Add a marker in Sydney and move the camera
         LatLng pipila = new LatLng(21.01441659282978, -101.25451029685178);
-        mMap.addMarker(new MarkerOptions().position(pipila).title("Monumento al Pipila"));
+        mMap.addMarker(new MarkerOptions().position(pipila).title("Monumento al Pipila").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(pipila));
     }
 }
