@@ -42,6 +42,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng basilica = new LatLng(21.016519783354365, -101.25318528559842);
         mMap.addMarker(new MarkerOptions().position(basilica).title("Basilica Guanajuato").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(basilica));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(basilica, 17));
     }
 }

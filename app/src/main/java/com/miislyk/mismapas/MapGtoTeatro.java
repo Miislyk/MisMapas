@@ -9,6 +9,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapGtoTeatro extends FragmentActivity implements OnMapReadyCallback {
@@ -42,6 +43,6 @@ public class MapGtoTeatro extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng teatro = new LatLng(21.015285414420763, -101.25302971747556);
         mMap.addMarker(new MarkerOptions().position(teatro).title("Teatro Juarez").icon(BitmapDescriptorFactory.fromResource(R.drawable.icono_gto)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(teatro));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(teatro, 17));
     }
 }
